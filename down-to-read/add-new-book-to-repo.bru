@@ -1,0 +1,19 @@
+meta {
+  name: add-new-book-to-repo
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:{{port}}/repo/{{repoId}}/books
+  body: multipartForm
+  auth: inherit
+}
+
+body:multipart-form {
+  file: @file(/home/alie/Desktop/latex-cheat (copy).pdf)
+}
+
+body:file {
+  file: @file(/home/alie/code/golang/down-to-read/latex-cheat.pdf) @contentType(application/pdf)
+}

@@ -1,0 +1,17 @@
+meta {
+  name: create-new-repo
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:{{port}}/repo
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "repository 1"
+  }
+}

@@ -1,0 +1,11 @@
+meta {
+  name: get-new-book-from-repo
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:{{port}}/repo/{{repoId}}/books
+  body: none
+  auth: inherit
+}

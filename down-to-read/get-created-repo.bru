@@ -1,0 +1,11 @@
+meta {
+  name: get-created-repo
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:{{port}}/repo/{{repoId}}
+  body: none
+  auth: inherit
+}
